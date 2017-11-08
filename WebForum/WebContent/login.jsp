@@ -5,9 +5,17 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-	<form action="LoginServlet" method="post">
+	
+		<div id="container">
+		<div id="cabeca">
+			
+			<img src="imagens/pyquestion.png">
+			
+			<div id="form">
+				<form action="LoginServlet" method="post">
 		<!-- RETORNO DO LOGIN(MENSAGEM DE ERRO) -->
 		<%
 			if (request.getAttribute("status") == null)
@@ -15,27 +23,31 @@
 		%>
 
 		<p style="color: red;"><%=request.getAttribute("status")%></p>
+				
+					<div class="form-input">
+						<input type="email" name="email" placeholder="E-mail">	
+					</div>
+					
+					<div class="form-input">
+						<input type="password" name="senha" placeholder="Senha">
+					</div>
 
-		<table>
-			<tr>
-				<td><p>
-						Email: <input type="email" name="email" id="email"
-							required="required"></td>
-			</tr>
-			<tr>
-				<td>Senha: <input type="password" id="senha" name="senha"
-					required="required">
-					</p></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="  Logar  " onclick="salvar()" /></td>
-			</tr>
-			<p>
-				Não tem uma conta?<br /> <a href="cadastroUsuario.jsp">
-					Cadastre-se</a>
-			</p>
-		</table>
-	</form>
+					<div class="organizador">
+						<div id="lembrarSenha" >
+							<input type="checkbox" name="IndicativaDeAcesso">
+							Lembrar de mim
+							<input type="submit" value="  Logar  " onclick="salvar()" >
+						</div>
+					</div>
+					<h4> Não tem uma conta?<br /> <a href="cadastroUsuario.jsp">
+					Cadastre-se</a></h4>
+					</form>
+					</div>
+
+		</div>
+	</div>
+	
+	
 
 </body>
 </html>

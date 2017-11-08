@@ -1,0 +1,50 @@
+body{
+	background: url('C:/Users/Cleyton/Music/Web Trabalho/Imagens/1.png');
+}
+#container{
+	width: 100%;
+}
+
+#cabeca{
+	width: 40%;
+	left: 40%;
+	border: 2px solid black;
+	border-radius: 20px 20px 20px 20px;
+	margin:0px auto;	
+	margin-top: 180px;
+	padding: 20px;
+	background-color:white;
+}
+ 
+ img{
+ 	width: 15em;
+ 	display: block;
+ 	margin: auto; 
+ }
+
+ .form-input{
+ 	width: 100%;
+ 	margin-top: 10px;
+ }
+
+ .form-input input{
+ 	border: 2px solid #14D4E1;
+ 	display: block;
+ 	margin: 0px auto; 
+ 	width: 20em;
+ 	height: 2em;
+ 	text-align: center;
+ }
+
+ #lembrarSenha input{
+ 	text-decoration-style: italic;
+ 	margin-top: 10px;
+	margin-left: 50px;
+	background-color: #14D4E1;	
+ }
+
+ h4{
+  	margin: auto;
+  	margin-top: 18px;
+  	text-align: center;
+ }
