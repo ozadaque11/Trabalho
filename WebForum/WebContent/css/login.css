@@ -1,18 +1,20 @@
 body{
 	background: url('C:/Users/Cleyton/Music/Web Trabalho/Imagens/1.png');
+	background-color: #00BFFF;
 }
 #container{
 	width: 100%;
 }
 
 #cabeca{
-	width: 40%;
+	width: 30%;
 	left: 40%;
-	border: 2px solid black;
+	border: 2px solid #ffff00;
 	border-radius: 20px 20px 20px 20px;
+	
 	margin:0px auto;	
-	margin-top: 180px;
-	padding: 20px;
+	margin-top: 150px;
+	padding: 60px;
 	background-color:white;
 }
  
@@ -34,17 +36,34 @@ body{
  	width: 20em;
  	height: 2em;
  	text-align: center;
+ 	font-weight: bold;
  }
 
- #lembrarSenha input{
+ #entrar input{
  	text-decoration-style: italic;
  	margin-top: 10px;
-	margin-left: 50px;
+	margin-left: 200px;
 	background-color: #14D4E1;	
+	font-weight: bold;
+	border-color: #14D4E1;
+	width: 30%;
+	height: 30px;
  }
 
  h4{
   	margin: auto;
   	margin-top: 18px;
   	text-align: center;
+  	text-decoration: none;
  }
+ #btnlogin{
+ color: white;
+ 
+ }
+ a{
+ text-decoration: none;
+ color:#1148c8;
+  }
+a:hover {
+	color: #14D4E1;
+}

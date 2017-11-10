@@ -33,14 +33,13 @@
 					</div>
 
 					<div class="organizador">
-						<div id="lembrarSenha" >
-							<input type="checkbox" name="IndicativaDeAcesso">
-							Lembrar de mim
-							<input type="submit" value="  Logar  " onclick="salvar()" >
+						<div id="entrar" >
+						
+							<input type="submit" value="  ENTRAR  " id="btnlogin" onclick="salvar()" >
 						</div>
 					</div>
 					<h4> Não tem uma conta?<br /> <a href="cadastroUsuario.jsp">
-					Cadastre-se</a></h4>
+				Cadastre-se já!</a></h4>
 					</form>
 					</div>
 
