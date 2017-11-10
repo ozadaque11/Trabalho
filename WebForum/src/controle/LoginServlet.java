@@ -66,7 +66,7 @@ public class LoginServlet extends HttpServlet {
 					} else {
 						
 						//validando login de acesso
-						request.setAttribute("status", "Login Invalido");
+						request.setAttribute("status", "Login Invalido!");
 
 						// REDIRECIONAR PARA PAGINA DE ACESSO:
 						RequestDispatcher despatcher = request.getRequestDispatcher("login.jsp");
