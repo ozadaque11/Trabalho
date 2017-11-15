@@ -17,8 +17,8 @@ DaoPostagem busca = new DaoPostagem();
 
 topico.setTopico(request.getParameter("pesquisa"));
 for(Postagem resposta: busca.buscarTopico(topico)){
-	session.setAttribute("pergunta", resposta.getPergunta());
-	session.setAttribute("pergunta", resposta.getDescricao());%>
+	request.setAttribute("pergunta", resposta.getPergunta());
+	request.setAttribute("descricao", resposta.getDescricao());%>
 <a href="mostrarDados.jsp"><%= session.getAttribute("pergunta")%></a><br>
 	<%} %>
 	

@@ -2,7 +2,7 @@ package beans;
 
 public class Respostas extends Postagem{
 	private int id_postagem;
-	private int id;
+	private int id_resposta;
 	private String mensagem;
 	
 	public Respostas() {
@@ -17,12 +17,16 @@ public class Respostas extends Postagem{
 		this.id_postagem = id_postagem;
 	}
 
-	public int getId() {
-		return id;
+	
+
+	
+
+	public int getId_resposta() {
+		return id_resposta;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId_resposta(int id_resposta) {
+		this.id_resposta = id_resposta;
 	}
 
 	public String getMensagem() {

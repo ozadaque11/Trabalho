@@ -1,30 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Pagina Inicial </title>
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="beans.Postagem"%>
+<%@page import="dao.DaoPostagem"%>
+<%@include file="cabeçalho.jsp"%>
+
+<link rel="stylesheet" type="text/css" href="css/paginaInicial.css">
 </head>
 <body>
-<form action="paginaRetornoBusca.jsp" method="get">
-topico:<select name="pesquisa">
-						<option value=""></option>
-						<option value="estruturaSequencial">Estrutura Sequencial</option>
-						<option value="estruturaDeDecisao">Estrutura De Decisao</option>
-						<option value="estruturaDeRepeticao">Estrutura De Repeticao</option>
-						<option value="listas">Listas</option>
-						<option value="funcoes">Funções</option>
-						<option value="strings">Strings</option>
-						<option value="arquivos">Arquivos</option>
-						<option value="classes">Classes</option>
-						
-				</select><br>
-				<input type="submit" value="pesquisar">
+	<div id="container">
+		<div id="pesquisa">
+			<form action="paginaInicial.jsp" method="get">
+				<ul>
+
+					<button type="submit" name="pesquisa" value="estruturaSequencial">
+						Estrutura Sequencial</button>
+					<button type="submit" name="pesquisa" value="estruturaDeDecisao">Estrutura
+						De Decisao</button>
+					<button type="submit" name="pesquisa" value="estruturaDeRepeticao">Estrutura
+						De Repeticao</button>
+					<button type="submit" name="pesquisa" value="listas">Listas</button>
+					<button type="submit" name="pesquisa" value="funcoes">Funções</button>
+					<button type="submit" name="pesquisa" value="strings">Strings</button>
+					<button type="submit" name="pesquisa" value="arquivos">Arquivos</button>
+					<button type="submit" name="pesquisa" value="classes">Classes</button>
+				</ul>
 
 
-</form>
 
+
+			</form>
+		</div>
+	</div>
+	<%
+		Postagem topico = new Postagem();
+		DaoPostagem busca = new DaoPostagem();
+		topico.setTopico(request.getParameter("pesquisa"));
+		if (topico.getTopico()== null) {
+			topico.setTopico("classes");
+		} else {
+			topico.setTopico(request.getParameter("pesquisa"));
+		}
+		for (Postagem resposta : busca.buscarTopico(topico)) {
+			session.setAttribute("pergunta", resposta.getPergunta());
+			session.setAttribute("descricao", resposta.getDescricao());
+	%>
+	<a href="mostrarDados.jsp"><%=session.getAttribute("pergunta")%></a>
+	<br>
+	<%
+		}
+	%>
 
 
 </body>

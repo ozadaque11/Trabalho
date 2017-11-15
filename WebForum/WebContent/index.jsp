@@ -12,6 +12,7 @@
 		Usuario Logado:
 		<%=session.getAttribute("nome")%></p>
 	<a href="perfil.jsp">perfil</a>
+	<a href="minhasPerguntas.jsp">Minhas Perguntas</a>
 	<form action="PostagemServlet" method="post">
 	Topico:
 				<select name="topico">

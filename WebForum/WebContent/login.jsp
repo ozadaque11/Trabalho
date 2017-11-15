@@ -1,15 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-
-<!DOCTYPE html>
-<head>
-	<meta charset="utf-8"/>
-	<title>Login</title>
+<%@include file="cabeÁalho.jsp"%>
 	<link rel="stylesheet" type="text/css"  href="css/login.css">
 </head>
 <body>
-	
+			
 		<div id="container">
+		
 		<div id="cabeca">
 			
 			<img src="imagens/pyquestion.png">
@@ -38,12 +33,13 @@
 							<input type="submit" value="  ENTRAR  " id="btnlogin" onclick="salvar()" >
 						</div>
 					</div>
-					<h4> N√£o tem uma conta?<br /> <a href="cadastroUsuario.jsp">
-				Cadastre-se j√°!</a></h4>
+					<h4> N„o tem uma conta?<br /> <a href="cadastroUsuario.jsp">
+				Cadastre-se j·!</a></h4>
 					</form>
 					</div>
 
 		</div>
+	<div id="fraseLogin"><p>ENTRE E FA«A SUA PERGUNTA!</p></div>
 	</div>
 	
 	
